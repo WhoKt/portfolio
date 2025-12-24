@@ -1,0 +1,756 @@
+@font-face {
+    font-family: 'Racama';
+    src: 
+        url(../fonts/Racama.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Zabava';
+    src: url(../fonts/Zabava_mari_chenak_0.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:link, a:visited, a:focus, a:active {
+    color: #E1E1E1;
+    transition: 0.5s;
+}
+
+a:hover {
+    color: #ababab;
+    transition: 0.5s;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Racama';
+    color: #E1E1E1;
+    /* overflow-x: hidden; */
+}
+
+.background {
+    min-height: 900px;
+
+    background-image: url('../img/фон.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding-left: 60px;
+    padding-top: 60px;
+}
+
+.btn-zakaz {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    margin-top: 80px;
+    height: 70px;
+    width: 30px;
+    padding: 0px 150px;
+    color: #292929;
+    background-color: #E1E1E1;
+    box-shadow: 0px 5px 30px 10px #e1e1e143;
+    border-radius: 300px;
+    font-size: 30px;
+    transition: 0.5s;
+}
+
+.btn-zakaz:hover {
+    cursor: pointer;
+    transition: 0.5s;
+    background-color: #000000;
+    color: #E1E1E1;
+}
+
+.title {
+    font-size: 60px;
+    font-weight: bold;
+    color: #E1E1E1;
+    text-transform: uppercase;
+}
+
+.desc {
+    font-size: 28px;
+    color: #E1E1E1;
+    margin-top: 20px;
+    width: 800px;
+}
+
+.logo {
+    font-family: 'Zabava';
+    color: #E1E1E1;
+    font-size: 40px;
+    padding-top: 40px;
+    cursor: default;
+}
+
+body {
+    position: relative;
+    z-index: -1000;
+}
+
+header {
+    margin-top: -40px;
+}
+
+.text-header {
+    width: 100%;
+    padding-top: 20px;
+    font-size: 20px;
+    text-transform: uppercase;
+
+    border-top: 2px solid #E1E1E1;
+
+    color: #E1E1E1;
+}
+
+.text-header {
+    display: flex;
+    justify-content: space-between;
+    width: 900px;
+}
+
+.header-block {
+    margin-top: -30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-text a {
+    cursor: pointer;
+}
+
+.line {
+    border: 1px solid #E1E1E1;
+    margin-bottom: 15px;
+}
+
+.cart {
+    display: flex;
+    flex-direction: row-reverse;
+    padding-right: 60px;
+    margin-top: -40px;
+}
+
+.cena {
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    padding-top: 10px;
+    padding-right: 10px;
+}
+
+.background-black {
+    height: auto;
+    position: relative;
+    z-index: -1;
+    padding-bottom: 100px;
+    margin-top: -200px;
+    background-color: #1A1817;
+}
+
+.background-black > * {
+    position: relative;
+    z-index: 1000;
+}
+
+.otstyp {
+    padding-top: 100px;
+}
+
+.kartochka.white {
+    box-shadow: 0 0 20px 2px rgba(255,255,255,0.2);
+    background-color: white;
+}
+
+.kartochka.white > .kartochka-cena {
+    border: 2px solid #000000;
+    background-color: #000000;
+    color: white;
+}
+
+.kartochka.white > .kartochka-cena:hover {
+    background-color: rgba(0, 0, 0, 0);
+    color: #000000;
+}
+
+.kartochka.white > .kartochka-description {
+    color: #000000;
+}
+
+.kartochka.white > .kartochka-title {
+    color: #000000;
+}
+
+h2.anti-otstyp {
+    position: relative;
+    z-index: -1000;
+}
+
+.hot {
+    position: absolute;
+    margin-left: 10px;
+    margin-top: 10px;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    border-radius: 100px;
+    padding: 2px 28px;
+    padding-top: 5px;
+    background-color: #FF4242;
+    color: white;
+}
+
+.title-block {
+    margin-top: 22px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #1A1817;
+    font-weight: bold;
+}
+
+.desc-block {
+    margin-top: 10px;
+    margin-bottom: 70px;
+    color: #1A1817;
+    font-size: 16px;
+    text-align: center;
+}
+
+.price {
+    transition: 0.5s;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 60px;
+    font-size: 24px;
+    background-color: #2D2D2D;
+    width: 150px;
+    border-radius: 100px;
+}
+
+.price:hover {
+    transition: 0.5s;
+    cursor: pointer;
+    background-color: #E1E1E1;
+    color: #1A1817;
+}
+
+.constructor-pelmen {
+    display: flex;
+    flex-direction: column;
+    min-width: 260px;
+}
+
+h2 {
+    padding-top: 400px;
+    text-align: center;
+    font-size: 64px;
+    text-transform: uppercase;
+}
+
+.anti-otstyp {
+    margin-top: -150px;
+}
+
+.sam-text {
+    display: flex;
+    font-size: 40px;
+    color: white;
+    line-height: 100%;
+    align-items: center;
+}
+
+.sam {
+    display: flex;
+    justify-content: flex-start;
+    gap: 50px;
+}
+
+.constructor-row {
+    margin-top: 30px;
+    margin-left: 10px;
+}
+
+.constructor {
+    background-color: #F5F5F5;
+    border-radius: 40px;
+    height: 600px;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+}
+
+.constructor-itogo {
+    margin-top: auto;
+    font-size: 36px;
+    color: #000000;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-left: 10px;
+    padding-bottom: 20px;
+}
+
+.constructor-make {
+    padding-right: 30px;
+    margin-right: 10px;
+    height: 460px;
+    overflow-y: scroll;
+}
+
+.constructor-make::-webkit-scrollbar {
+    width: 15px;
+}
+
+.constructor-make::-webkit-scrollbar-track {
+    border-radius: 15px;
+    margin-top: 20px;
+    margin-right: 20px;
+    background: #D9D9D9;
+}
+
+.constructor-make::-webkit-scrollbar-thumb {
+    transition: 0.5s;
+    background-color: #EDEDED;
+    width: 5px;
+    box-shadow: inset 0 0 0 5px #D9D9D9;
+    border-radius: 100px;
+}
+
+.constructor-make::-webkit-scrollbar-thumb:hover {
+    transition: 0.5s;
+    background-color: #ffffff;
+}
+
+.constructor-price {
+    color: #000000;
+    font-size: 18px;
+}
+
+.sht {
+    font-size: 20px;
+    margin-right: 20px;
+    margin-left: -10px;
+    padding-top: 20px;
+    line-height: 0px;
+    color: #292929;
+}
+
+.constructor-row {
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.constructor-title {
+    color: #000000;
+    font-size: 26px;
+}
+
+.constructor-input {
+    width: 70px;
+    height: 30px;
+    border-radius: 40px;
+    background-color: rgba(0, 0, 0, 0);
+    border: 2px solid #2D2D2D;
+    color: #2D2D2D;
+    padding: 5px;
+    margin-left: auto;
+    text-align: right;
+    padding-right: 15px;
+    font-size: 20px;
+}
+
+.constructor-button {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    font-size: 20px;
+    border-radius: 100px;
+    background-color: #2D2D2D;
+    border: 2px solid #2D2D2D;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    line-height: 10px;
+}
+
+.constructor-button:hover {
+    transition: 0.5s;
+    background-color: rgba(0, 0, 0, 0);
+    color: #2D2D2D;
+}
+
+.tovari {
+    margin: 200px 0px;
+}
+
+.kartochka-image {
+    width: 100%;
+    height: 150px;
+    border-top-left-radius: 38px;
+    border-top-right-radius: 38px;
+    margin-bottom: 16px;
+}
+
+.kartochka {
+    height: 380px;
+    background-color: #171717;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+    box-shadow: 0 0 20px 2px rgba(0,0,0,0.2);
+}
+
+.kartochka-title {
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.kartochka-description {
+    color: white;
+    text-align: center;
+}
+
+.kartochka-cena {
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 100px;
+    color: #000000;
+    border: 2px solid rgba(0, 0, 0, 0);
+    font-size: 20px;
+    margin-top: auto;
+    width: 120px;
+    padding: 5px 0px;
+}
+
+.kartochka-cena:hover {
+    cursor: pointer;
+    transition: 0.5s;
+    background-color: rgba(0, 0, 0, 0);
+    border: 2px solid white;
+    color: white;
+}
+
+.kartochka-image-blur {
+    position: relative;
+}
+
+.kartochka-image-blur::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 60px;
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    mask-image: linear-gradient(
+        to top,
+        rgba(0,0,0,1),
+        rgba(0,0,0,0)
+    );
+}
+
+.footer-row {
+    display: flex;
+    background-color: #3C3C3C;
+    height: 100px;
+    justify-content: space-around;
+    align-self: center;
+}
+
+.footer-row > * {
+    cursor: pointer;
+    margin: auto 0;
+    font-size: 22px;
+}
+
+.ikonki {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 100px;
+}
+
+.round {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ikonki > * {
+    height: 70px;
+    width: 70px;
+    border-radius: 100%;
+    background-color: #D9D9D9;
+}
+@media (max-width: 768px) {
+
+    .background {
+        padding: 40px 30px;
+    }
+
+    .text-header {
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: center;
+        font-size: 18px;
+    }
+
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .text-header {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .cart {
+        padding-right: 0;
+        margin-top: 0;
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .logo {
+        padding-top: 0;
+        margin-bottom: 25px;
+    }
+
+    .title {
+        font-size: 42px;
+    }
+
+    .desc {
+        width: 100%;
+        font-size: 22px;
+    }
+
+    .btn-zakaz {
+        padding: 0 100px;
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 50px;
+    }
+
+    .kartochka {
+        height: 350px;
+        margin: 0 auto;
+        margin-bottom: 25px;
+    }
+
+    .constructor {
+        width: 100%;
+        height: auto;
+    }
+
+    .sam-text {
+        font-size: 26px;
+        margin-top: 30px;
+    }
+    .constructor {
+        width: 100%;
+        height: auto;
+    }
+
+    .constructor-row {
+        flex-wrap: nowrap;
+        gap: 10px;
+    }
+
+    .constructor-title {
+        font-size: 20px;
+    }
+
+    .constructor-input {
+        width: 60px;
+        font-size: 18px;
+    }
+
+    .constructor-button {
+        width: 28px;
+        height: 28px;
+    }
+
+    .constructor-itogo {
+        margin-top: 30px;
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 576px) {
+
+    h2 {
+        font-size: 40px;
+    }
+
+    .constructor {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+        border-radius: 25px;
+    }
+
+    .constructor-row {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 10px;
+        margin-left: 0;
+    }
+
+    .constructor-pelmen {
+        width: 100%;
+        min-width: unset;
+    }
+
+    .constructor-title {
+        font-size: 25px;
+    }
+
+    .constructor-price {
+        font-size: 16px;
+    }
+
+    .constructor-input {
+        width: 20%;
+        margin-left: 0;
+        text-align: right;
+        font-size: 18px;
+    }
+
+    .sht {
+        margin-left: 1px;
+        font-size: 16px;
+    }
+
+    .constructor-button {
+        width: 36px;
+        height: 36px;
+        font-size: 18px;
+    }
+
+    .constructor-button + .constructor-button {
+        margin-left: 10px;
+    }
+
+    .constructor-itogo {
+        font-size: 22px;
+        text-align: center;
+        padding: 20px 0 0;
+    }
+
+    .background {
+        padding: 20px;
+    }
+
+    .logo {
+        margin-top: 25px;
+        margin-bottom: 10px;
+        font-size: 32px;
+        text-align: center;
+    }
+
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .text-header {
+        flex-direction: column;
+        align-items: center;
+        font-size: 16px;
+    }
+
+    .title {
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .desc {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .btn-zakaz {
+        width: 100%;
+        padding: 0;
+        font-size: 20px;
+        height: 60px;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .kartochka {
+        height: 400px;
+        width: 60%;
+        margin: 0 auto;
+        margin-bottom: 40px;
+    }
+
+    .ikonki {
+        padding: 0 20px;
+    }
+
+    .footer-row {
+        flex-direction: column;
+        height: auto;
+        gap: 20px;
+        padding: 20px 0;
+    }
+
+    .footer-row > * {
+        text-align: center;
+        font-size: 18px;
+    }
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Регистрация — Mordovia GameHub</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-dark">
+
+<header class="header">
+    <div class="header__container">
+        <div class="header__logo">
+            <a href="index.html">
+                <img src="./img/logo.svg" alt="Mordovia GameHub">
+            </a>
+        </div>
+
+        <nav class="nav nav--desktop">
+            <a href="index.html" class="nav__link">Главная</a>
+            <a href="catalog.html" class="nav__link">Каталог</a>
+            <a href="login.html" class="nav__button">Войти</a>
+        </nav>
+
+        <button class="burger" id="burger">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+
+    <nav class="nav nav--mobile" id="mobileMenu">
+        <a href="index.html">Главная</a>
+        <a href="catalog.html">Каталог</a>
+        <a href="login.html">Войти</a>
+    </nav>
+</header>
+
+<main class="auth">
+    <section class="auth__container">
+        <h1 class="auth__title">Регистрация</h1>
+
+        <form class="auth__form">
+            <label class="auth__field">
+                <span>E-mail</span>
+                <input type="email" required>
+            </label>
+
+            <label class="auth__field">
+                <span>Фамилия</span>
+                <input type="text" required>
+            </label>
+
+            <label class="auth__field">
+                <span>Имя</span>
+                <input type="text" required>
+            </label>
+
+            <label class="auth__field">
+                <span>Дата рождения</span>
+                <input type="date" required>
+            </label>
+
+            <label class="auth__field">
+                <span>Номер телефона</span>
+                <input type="tel" required>
+            </label>
+
+            <label class="auth__field">
+                <span>Пароль</span>
+                <input type="password" required>
+            </label>
+
+            <label class="auth__field">
+                <span>Повтор пароля</span>
+                <input type="password" required>
+            </label>
+
+            <label class="auth__checkbox">
+                <input type="checkbox" required>
+                <span>Согласен на обработку персональных данных</span>
+            </label>
+
+            <button type="submit" class="auth__submit">Зарегистрироваться</button>
+        </form>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="footer__contacts">
+        <p>8-800-999-55-99</p>
+        <p>best@games.ru</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

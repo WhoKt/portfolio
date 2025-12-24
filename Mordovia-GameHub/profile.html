@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Личный кабинет — Mordovia GameHub</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-dark">
+
+<header class="header">
+    <div class="header__container">
+        <div class="header__logo">
+            <a href="index.html">
+                <img src="./img/logo.svg" alt="Mordovia GameHub">
+            </a>
+        </div>
+
+        <nav class="nav nav--desktop">
+            <a href="index.html" class="nav__link">Главная</a>
+            <a href="catalog.html" class="nav__link">Каталог</a>
+            <a href="login.html" class="nav__button">Выйти</a>
+        </nav>
+
+        <button class="burger" id="burger">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+
+    <nav class="nav nav--mobile" id="mobileMenu">
+        <a href="index.html">Главная</a>
+        <a href="catalog.html">Каталог</a>
+        <a href="login.html">Выйти</a>
+    </nav>
+</header>
+
+<main class="profile">
+
+<section class="profile__block">
+    <h1 class="profile__title">Информация о пользователе</h1>
+
+    <ul class="profile__info">
+        <li><strong>E-mail:</strong> user@mail.ru</li>
+        <li><strong>Фамилия:</strong> Шлыков</li>
+        <li><strong>Имя:</strong> Матвей</li>
+        <li><strong>Дата рождения:</strong> 02.07.2008</li>
+        <li><strong>Телефон:</strong> +7 (900) 000-00-00</li>
+    </ul>
+</section>
+
+<section class="profile__block">
+    <h2 class="profile__subtitle">История покупок</h2>
+
+    <table class="profile__table">
+        <thead>
+            <tr>
+                <th>Дата</th>
+                <th>Товар</th>
+                <th>Стоимость</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>10.10.2024</td>
+                <td>Игра 1</td>
+                <td>1299 ₽</td>
+            </tr>
+            <tr>
+                <td>05.09.2024</td>
+                <td>Игра 2</td>
+                <td>999 ₽</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<section class="profile__block">
+    <h2 class="profile__subtitle">Настройки профиля</h2>
+
+    <button class="profile__button">Сменить пароль</button>
+
+    <div class="profile__theme">
+        <span>Тема:</span>
+        <button class="profile__theme-btn">Тёмная</button>
+        <button class="profile__theme-btn">Светлая</button>
+    </div>
+</section>
+
+</main>
+
+<footer class="footer">
+    <div class="footer__contacts">
+        <p>8-800-999-55-99</p>
+        <p>best@games.ru</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

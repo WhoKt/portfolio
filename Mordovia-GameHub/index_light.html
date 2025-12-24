@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Mordovia GameHub — Светлая тема</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-light">
+
+<header class="header header--light">
+    <div class="header__container">
+        <div class="header__logo">
+            <img src="./img/logo.svg" alt="Mordovia GameHub">
+        </div>
+
+        <nav class="nav nav--desktop">
+            <a href="#search" class="nav__link">Поиск</a>
+            <a href="catalog.html" class="nav__link">Каталог</a>
+            <a href="profile.html" class="nav__link">Личный кабинет</a>
+            <a href="login.html" class="nav__button__light nav__button">Войти</a>
+        </nav>
+
+        <button class="burger" id="burger">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+
+    <nav class="nav nav--mobile" id="mobileMenu">
+        <a href="#search">Поиск</a>
+        <a href="catalog.html">Каталог</a>
+        <a href="profile.html">Личный кабинет</a>
+        <a href="login.html">Войти</a>
+    </nav>
+</header>
+
+<main>
+
+<section class="slider">
+    <div class="slider__track" id="sliderTrack">
+        <div class="slider__item">
+            <img src="./img/game1.jpg" alt="">
+            <h3>Игра 1</h3>
+            <p>1999 ₽</p>
+            <div class="slider_button"><a href="catalog.html">Подробнее</a></div>
+        </div>
+        <div class="slider__item">
+            <img src="./img/game2.jpg" alt="">
+            <h3>Игра 2</h3>
+            <p>1499 ₽</p>
+            <div class="slider_button"><a href="catalog.html">Подробнее</a></div>
+        </div>
+        <div class="slider__item">
+            <img src="./img/game3.jpg" alt="">
+            <h3>Игра 3</h3>
+            <p>999 ₽</p>
+            <div class="slider_button"><a href="catalog.html">Подробнее</a></div>
+        </div>
+    </div>
+
+    <div class="slider__dots" id="sliderDots">
+        <span class="active"></span>
+        <span></span>
+        <span></span>
+    </div>
+</section>
+
+<section class="search" id="search">
+    <h2>Быстрый поиск по жанрам</h2>
+    <div class="search__form">
+        <input type="text" placeholder="Введите жанр">
+        <button>Найти</button>
+    </div>
+</section>
+
+<section class="features">
+    <div class="feature"><p>Привлекательные цены</p></div>
+    <div class="feature"><p>Ежемесячные акции</p></div>
+    <div class="feature"><p>Поддержка 24/7</p></div>
+    <div class="feature"><p>Быстрая покупка</p></div>
+</section>
+
+<section class="games">
+    <h2>Популярные игры</h2>
+    <div class="games__list">
+        <a href="catalog.html" class="game-card">
+            <img src="./img/game-example.jpg" alt="пример игры.jpg">
+            <h3>Игра</h3>
+            <p>RPG • Studio</p>
+            <p>★★★★★</p>
+            <span>1299 ₽</span>
+        </a>
+
+        <a href="catalog.html" class="game-card">
+            <img src="./img/game-example.jpg" alt="пример игры.jpg">
+            <h3>Игра</h3>
+            <p>RPG • Studio</p>
+            <p>★★★★★</p>
+            <span>1299 ₽</span>
+        </a>
+
+        <a href="catalog.html" class="game-card">
+            <img src="./img/game-example.jpg" alt="пример игры.jpg">
+            <h3>Игра</h3>
+            <p>RPG • Studio</p>
+            <p>★★★★★</p>
+            <span>1299 ₽</span>
+        </a>
+
+        <a href="catalog.html" class="game-card">
+            <img src="./img/game-example.jpg" alt="пример игры.jpg">
+            <h3>Игра</h3>
+            <p>RPG • Studio</p>
+            <p>★★★★★</p>
+            <span>1299 ₽</span>
+        </a>
+
+        <a href="catalog.html" class="game-card">
+            <img src="./img/game-example.jpg" alt="пример игры.jpg">
+            <h3>Игра</h3>
+            <p>RPG • Studio</p>
+            <p>★★★★★</p>
+            <span>1299 ₽</span>
+        </a>
+    </div>
+</section>
+
+<section class="partners">
+    <h2>Наши партнёры</h2>
+    <div class="partners__list">
+        <img src="./img/partner1.svg" alt="">
+        <img src="./img/partner2.svg" alt="">
+        <img src="./img/partner3.svg" alt="">
+    </div>
+</section>
+
+</main>
+
+<footer class="footer footer--light">
+    <div class="footer__contacts">
+        <p>8-800-999-55-99</p>
+        <p>best@games.ru</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

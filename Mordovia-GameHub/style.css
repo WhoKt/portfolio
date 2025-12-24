@@ -1,0 +1,544 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Segoe UI, Arial, sans-serif;
+    background: #121212;
+    color: #ffffff;
+}
+
+/* header */
+.header {
+    background: #1e1e1e;
+    padding: 15px 20px;
+}
+
+.header__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__logo img {
+    height: 40px;
+}
+
+.header__logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* nav */
+.nav__link,
+.nav__button {
+    margin-right: 15px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav__button {
+    padding: 6px 12px;
+    border: 1px solid #fff;
+}
+
+/* burger */
+.burger {
+    display: none;
+    background: none;
+    border: none;
+}
+
+.burger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: #fff;
+    margin: 4px 0;
+}
+
+.slider {
+    overflow: hidden;
+}
+
+.slider__track {
+    display: flex;
+    transition: transform 0.5s;
+}
+
+.slider__item {
+    width: 100%;
+    flex-shrink: 0;
+    text-align: center;
+    margin: auto 0;
+}
+
+.slider_button {
+    border: 1px solid #ca5e00;
+    padding: 5px 0;
+    width: 150px;
+    margin: 0 auto;
+}
+
+.slider__item a {
+    color: #ca5e00;
+    text-decoration: none;
+}
+
+.slider__item img {
+    max-width: 100%;
+}
+
+.slider__dots {
+    text-align: center;
+}
+
+.slider__dots span {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: #ad9e29;
+    border-radius: 50%;
+    margin: 5px;
+}
+
+.slider__dots .active {
+    transition: background 0.5s;
+    background: #f1ff71;
+}
+
+/* search */
+.search {
+    padding: 20px;
+    text-align: center;
+}
+
+.search__form input {
+    padding: 8px;
+    width: 200px;
+}
+
+.search__form button {
+    padding: 8px 12px;
+}
+
+/* features */
+.features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 20px;
+}
+
+.feature img {
+    width: 50px;
+}
+
+h2 {
+    text-align: center;
+}
+
+.feature {
+    text-align: center;
+}
+
+/* games */
+.games {
+    padding: 20px;
+}
+
+.games__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.game-card {
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.5s;
+    background: #1e1e1e;
+    padding: 10px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.game-card__link {
+    transition: color 0.5s;
+    transition: border-color 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 5px 15px;
+    border: 1px solid #ca5e00;
+    color: #ca5e00;
+}
+
+.game-card__link:hover {
+    transition: color 0.5s;
+    transition: border-color 0.5s;
+    border-color: #bcca00;
+    color: #bcca00;
+}
+
+.game-card:hover {
+    transition: transform 0.5s;
+    transform: translateY(10px);
+}
+
+.game-card img {
+    width: 100%;
+    max-height: 200px;
+}
+
+/* partners */
+.partners {
+    padding: 20px;
+    text-align: center;
+}
+
+.partners__list img {
+    height: 40px;
+    margin: 10px;
+}
+
+/* footer */
+.footer {
+    background: #1e1e1e;
+    padding: 20px;
+    text-align: center;
+}
+
+/* planshet */
+@media (min-width: 768px) {
+    .features {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .games__list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* desktop */
+@media (min-width: 1200px) {
+    .burger {
+        display: none;
+    }
+
+    .nav--desktop {
+        display: block;
+    }
+
+    .nav--mobile {
+        display: none;
+    }
+
+    .games__list {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+/* mobile */
+@media (max-width: 767px) {
+    .nav--desktop {
+        display: none;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .nav--mobile {
+        display: none;
+        flex-direction: column;
+        background: #1e1e1e;
+        padding: 10px;
+    }
+}
+
+/* auth */
+.auth {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 120px);
+    padding: 20px;
+}
+
+.auth__container {
+    background: #1e1e1e;
+    padding: 30px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.auth__title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.auth__form {
+    display: flex;
+    flex-direction: column;
+}
+
+.auth__field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.auth__field span {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.auth__field input {
+    padding: 8px;
+    background: #121212;
+    border: 1px solid #444;
+    color: #fff;
+}
+
+.auth__submit {
+    padding: 10px;
+    margin-top: 10px;
+    background: #ffffff;
+    color: #000;
+    border: none;
+    cursor: pointer;
+}
+
+.auth__link {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 14px;
+    color: #aaa;
+    text-decoration: none;
+}
+
+.auth__checkbox {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 10px 0 15px;
+    font-size: 14px;
+}
+
+/* profile */
+.profile {
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.profile__block {
+    background: #1e1e1e;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.profile__title {
+    margin-bottom: 15px;
+}
+
+.profile__info li {
+    margin-bottom: 8px;
+    list-style: none;
+}
+
+.profile__table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.profile__table th,
+.profile__table td {
+    border: 1px solid #333;
+    padding: 8px;
+    text-align: left;
+}
+
+.profile__button {
+    padding: 8px 12px;
+    margin-bottom: 10px;
+}
+
+.profile__theme {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile__theme-btn {
+    padding: 6px 10px;
+    cursor: pointer;
+}
+
+/* catalog */
+.catalog {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.catalog__filter-btn {
+    display: block;
+    padding: 10px;
+    background: #1e1e1e;
+    color: #fff;
+    border: 1px solid #444;
+}
+
+.catalog__filters {
+    display: none;
+    background: #1e1e1e;
+    padding: 15px;
+}
+
+.catalog__filters label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.catalog__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+/* planshet */
+@media (min-width: 768px) {
+    .catalog__list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* desktop */
+@media (min-width: 1200px) {
+    .catalog {
+        grid-template-columns: 250px 1fr;
+    }
+
+    .catalog__filter-btn {
+        display: none;
+    }
+
+    .catalog__filters {
+        display: block;
+    }
+
+    .catalog__list {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* admin */
+.admin {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.admin__container {
+    background: #1e1e1e;
+    padding: 25px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.admin__title {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.admin__form {
+    display: flex;
+    flex-direction: column;
+}
+
+.admin__field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.admin__field span {
+    margin-bottom: 5px;
+}
+
+.admin__field input,
+.admin__field textarea {
+    padding: 8px;
+    background: #121212;
+    border: 1px solid #444;
+    color: #fff;
+}
+
+.admin__submit {
+    padding: 10px;
+    margin-top: 10px;
+    background: #ffffff;
+    color: #000;
+    border: none;
+    cursor: pointer;
+}
+
+/* light_index.html */
+.theme-light {
+    background: #f4f4f4;
+    color: #000;
+}
+
+.header--light,
+.footer--light {
+    background: #ffffff;
+    color: #000;
+}
+
+.theme-light .nav__link,
+.theme-light .nav__button {
+    transition: background-color 0.5s;
+    color: #000;
+    border-color: #000;
+}
+
+.nav__button__dark:hover {
+    transition: background-color 0.5s;
+    background-color: rgba(255,255,255,0.1);
+}
+
+.nav__button__light:hover {
+    transition: background-color 0.5s;
+    background-color: rgba(0,0,0,0.05);
+}
+
+.theme-light .game-card {
+    background: #ffffff;
+    color: #000;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.theme-light .auth__container,
+.theme-light .profile__block,
+.theme-light .admin__container {
+    background: #ffffff;
+    color: #000;
+}
+
+.theme-light input,
+.theme-light textarea {
+    background: #fff;
+    color: #000;
+    border: 1px solid #ccc;
+}
